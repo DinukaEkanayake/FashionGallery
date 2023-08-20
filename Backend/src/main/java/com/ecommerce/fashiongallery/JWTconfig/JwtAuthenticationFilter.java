@@ -43,7 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter { //every time
         }
 
         //extraction of token from the header.
-        jwtToken=authHeader.substring(7);//bearer count is 7
+        jwtToken=authHeader.substring(7);
 
         //then need to check user is already within our database or not
         //before that need to call jwtservice to extract username.

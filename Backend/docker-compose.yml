@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  backend-server:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - fashiondb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://fashiondb:3306/fashiondb?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: com.mysql.cj.jdbc.Driver
+    networks:
+      - fashiongallery-network
+
+  fashiondb:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: admin
+    volumes:
+      - fashiondb:/var/lib/mysql
+
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "fashiondb" ]
+      start_period: 60s
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    networks:
+      - fashiongallery-network
+
+  frontend-server:
+    build: ../frontend
+    ports:
+      - 3000:3000
+    networks:
+      - fashiongallery-network
+
+networks:
+  fashiongallery-network:
+volumes:
+  fashiondb:
+
+
