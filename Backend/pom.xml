@@ -102,7 +102,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>fashiongallery-api</finalName>
 	</build>
 
 </project>
