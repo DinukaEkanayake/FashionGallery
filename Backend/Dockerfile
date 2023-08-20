@@ -4,7 +4,7 @@ WORKDIR /app
 
 EXPOSE 8080
 
-ADD target/*.jar /app/app.jar
+COPY ../target/*.jar /app/app.jar
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
 
