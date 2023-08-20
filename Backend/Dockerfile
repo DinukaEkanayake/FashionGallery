@@ -1,11 +1,11 @@
 FROM openjdk:17
 
-WORKDIR /app
+WORKDIR Backend/app
 
 EXPOSE 8080
 
-COPY ../target/*.jar /app/app.jar
+COPY Backend/target/*.jar Backend/app/app.jar
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["java","-jar","Backend/app/app.jar"]
 
 
