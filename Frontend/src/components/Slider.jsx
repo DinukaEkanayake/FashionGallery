@@ -6,7 +6,7 @@ import { sliderItems } from "../data";
 import { mobile } from "../responsive";
 
 
-import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 
 const Container = styled.div`

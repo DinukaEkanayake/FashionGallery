@@ -7,11 +7,9 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Copyright from '../components/Copyright'
 import { Add, HighlightOff, Remove } from '@material-ui/icons'
-import { BrowserRouter as Router, Route,Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useHistory } from "react-router-dom";
-import Checkout from "../pages/Checkout";
 import { useNavigate } from 'react-router-dom';
 
 
