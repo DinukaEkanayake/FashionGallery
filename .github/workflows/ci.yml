@@ -32,7 +32,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: dinukaekanayake/fashiongallery
+        image: dinukaekanayake/fashiongallery:backend
         tags: latest
         registry: docker.io
         dockerfile: Backend/Dockerfile
@@ -68,7 +68,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: dinukaekanayake/fashiongallery
+        image: dinukaekanayake/fashiongallery:frontend
         tags: latest
         registry: docker.io
         dockerfile: Frontend/Dockerfile
