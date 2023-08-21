@@ -59,7 +59,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: /Frontend
+      working-directory: Frontend/package.json
 
     - name: Run the tests
       run: npm test
