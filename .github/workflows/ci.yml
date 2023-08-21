@@ -62,9 +62,11 @@ jobs:
 
     - name: Run the tests
       run: npm test
+      working-directory: FashionGallery/Frontend
 
     - name: Build
       run: npm run build
+      working-directory: FashionGallery/Frontend
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
