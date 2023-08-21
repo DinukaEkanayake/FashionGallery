@@ -59,16 +59,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: Frontend/
+      working-directory: Frontend
 
     - name: Run the tests
       run: npm test
-      working-directory: Frontend/
-     
+      working-directory: Frontend
 
     - name: Build
       run: npm run build
-      
+      working-directory: Frontend
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
