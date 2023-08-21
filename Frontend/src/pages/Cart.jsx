@@ -78,7 +78,7 @@ const Cart = (customerId) => {
   //console.log(totalCartAmount);
   const updateShoppingCartQuantity = async (shoppingCartId, quantity) => {
     try {
-      const response = await axios.post(
+       await axios.post(
         `http://localhost:8080/api/v1/cart/updateShoppingCart?shoppingCartId=${shoppingCartId}&quantity=${quantity}`
         );
       //return response.data;
@@ -90,7 +90,7 @@ const Cart = (customerId) => {
 
   const deleteCartItem = async (shoppingCartId) => {
     try {
-      const response = await axios.post(
+       await axios.post(
         `http://localhost:8080/api/v1/cart/deleteCartItem?shoppingCartId=${shoppingCartId}`
         );
       //return response.data;

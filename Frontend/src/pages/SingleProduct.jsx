@@ -32,7 +32,7 @@ const SingleProduct = () => {
       console.log(response.data);
     };
     fetchData();
-  }, []);
+  }, [productId]);
   const navigate = useNavigate();
   const handleAddToCart = async () => {
 
