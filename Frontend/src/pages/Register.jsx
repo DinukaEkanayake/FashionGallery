@@ -1,9 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import companyLogo from "../images/logo.png";
 import { Container, Wrapper, Title, FORM, Input, Agreement,Buttons, Button1,Button2, Image } from "../styles/Register-Styles.jsx";
-import { colors } from '@material-ui/core';
-import {BrowserRouter as Router,Route,Link } from "react-router-dom";
+import {BrowserRouter as Link } from "react-router-dom";
 import '../styles/Errors.css';
 
 function Register() {

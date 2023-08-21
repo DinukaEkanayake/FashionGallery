@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import backgroundImageLogin from "../images/bi-login.jpg"
-import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 export const Container = styled.div`
     width: 100w;

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Navlogo from "../images/Navlogo.png";
 import { useNavigate } from 'react-router-dom';
 
-import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import {mobile} from "../responsive"
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';

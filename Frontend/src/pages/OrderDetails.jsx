@@ -7,7 +7,7 @@ import Copyright from '../components/Copyright';
 import Announcement from '../components/Announcement';
 import Newsletter from '../components/Newsletter';
 import axios from 'axios';
-import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Container = styled.div``;
 const Title = styled.h1`

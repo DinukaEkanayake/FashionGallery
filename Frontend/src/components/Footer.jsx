@@ -3,7 +3,7 @@ import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } fro
 import styled from "styled-components"
 import companyLogo from "../images/logo.png";
 import paymentlogos from "../images/payments.png"
-import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Container = styled.div`
     display: flex;

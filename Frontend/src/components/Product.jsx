@@ -1,15 +1,11 @@
 import {
-    LocalMall,
     LocalMallOutlined,
     SearchOutlined,
     ShoppingCartOutlined,
   } from "@material-ui/icons";
   import styled from "styled-components";
-  import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
   import { useNavigate } from 'react-router-dom';
-  import {mobile} from "../responsive"
   import axios from 'axios';
-  import React, { useEffect, useState } from 'react';
 
   const Info = styled.div`
     opacity: 0;

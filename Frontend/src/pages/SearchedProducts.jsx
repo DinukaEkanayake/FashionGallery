@@ -6,7 +6,6 @@ import Footer from "../components/Footer"
 import Copyright from "../components/Copyright"
 import {Container,FilterContainer,FilterText,
         Filter,Select,Option} from "../styles/ProductList-Styles"
-import { BrowserRouter as Router, Route} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 

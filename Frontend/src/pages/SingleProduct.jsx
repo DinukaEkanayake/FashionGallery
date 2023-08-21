@@ -39,7 +39,7 @@ const SingleProduct = () => {
     const customerId = localStorage.getItem("id");
     const data = { productId: product.id, quantity };
     try {
-      const response = await axios.post(`http://localhost:8080/api/v1/cart/addToCart/${customerId}`, data);
+      await axios.post(`http://localhost:8080/api/v1/cart/addToCart/${customerId}`, data);
       navigate('../pages/Cart');
     } catch (error) {
       console.log(error);
