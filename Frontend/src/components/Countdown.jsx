@@ -38,8 +38,8 @@ const Countdown = () => {
     //component did mount method
     useEffect(() => {
         startTimer();
+        const currentInterval = interval.current;
         return () => {
-            const currentInterval = interval.current;
             clearInterval(currentInterval);
         }
     },[]);

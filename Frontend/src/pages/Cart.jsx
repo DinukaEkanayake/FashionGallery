@@ -133,7 +133,7 @@ const Cart = (customerId) => {
     const newTotalCartAmount = newCartItems.reduce((total, item) => total + item.amount, 0);
     setCartItems(newCartItems);
     setTotalCartAmount(newTotalCartAmount);
-  }, [cartItems]);
+  }, [productDetails,cartItems]);
 
   const handleCheckout =()=>{
 

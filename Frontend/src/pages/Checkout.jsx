@@ -39,7 +39,7 @@ const Checkout = () => {
      
       
     }
-  }, [singleProductQuantity]);
+  }, [singleProductId,singleProductQuantity]);
 
  
 
