@@ -150,7 +150,7 @@ const Navbar = (props) =>{
         };
         fetchCartItems();
     }
-  }, []);
+  }, [id, token]);
 
   const handleSearch = () => {
     const searchQuery = searchValue;

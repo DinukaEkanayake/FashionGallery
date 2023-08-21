@@ -36,7 +36,7 @@ const Cart = (customerId) => {
       }
     };
     fetchCartItems();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
       const getProductDetails = async () => {
@@ -133,7 +133,7 @@ const Cart = (customerId) => {
     const newTotalCartAmount = newCartItems.reduce((total, item) => total + item.amount, 0);
     setCartItems(newCartItems);
     setTotalCartAmount(newTotalCartAmount);
-  }, [productDetails]);
+  }, [cartItems]);
 
   const handleCheckout =()=>{
 
