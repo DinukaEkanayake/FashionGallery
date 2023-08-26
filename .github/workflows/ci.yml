@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: FashionGallery CI-Backend&Frontend
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: dinukaekanayake/fashiongallery
-        tags: latest
+        tags: backend-latest
         registry: docker.io
         dockerfile: Backend/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -69,7 +69,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: dinukaekanayake/fashiongallery
-        tags: latest
+        tags: frontend-latest
         registry: docker.io
         dockerfile: Frontend/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
