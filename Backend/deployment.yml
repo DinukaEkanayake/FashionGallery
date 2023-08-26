@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: FashionGallery-Backend
+  labels:
+    app: FashionGallery-Backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: FashionGallery-Backend
+  template:
+    metadata:
+      labels:
+        app: FashionGallery-Backend
+    spec:
+      containers:
+        - name: FashionGallery-Backend
+          image: dinukaekanayake/FashionGallery:latest
+          ports:
+            - containerPort: 8080
