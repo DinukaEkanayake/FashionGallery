@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: FashionGallery-Backend
-          image: dinukaekanayake/FashionGallery:latest
+          image: dinukaekanayake/fashiongallery:replaceImageTag
           ports:
             - containerPort: 8080
