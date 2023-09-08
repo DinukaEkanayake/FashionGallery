@@ -1,5 +1,4 @@
 #stage 1 - build stage
-#rich base image
 FROM ubuntu as stage1
 
 WORKDIR Backend/app
