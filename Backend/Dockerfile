@@ -2,14 +2,9 @@
 #rich base image
 FROM ubuntu as stage1
 
-#WORKDIR Backend/app
-RUN apt update && apt install -y maven
+WORKDIR Backend/app
 
-COPY . .
-
-RUN mvn clean install
-
-#COPY Backend/target/*.jar Backend/app/app.jar
+COPY Backend/target/*.jar Backend/app/app.jar
 
 #stage 2 - running stage
 FROM openjdk:17
