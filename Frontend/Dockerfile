@@ -1,18 +1,26 @@
 #stage 1 - build stage
-#rich base image
-FROM ubuntu as stage1
+FROM node:19.9.0-alpine as stage1
 
-COPY Frontend/package*.json .
+WORKDIR /app
+
+#from local to container work container
+COPY package*.json .
 
 RUN npm install
 
-COPY Frontend/* .
+COPY . .
+
+RUN npm run build
 
 #stage 2 - running stage
-FROM node:19.5.0-alpine
+FROM nginx:alpine
 
-WORKDIR Frontend/app
+WORKDIR /usr/share/nginx/html
 
-EXPOSE 8080
+# Copy the built static files from the previous stage
+COPY --from=stage1 /app/build .
 
-CMD ["npm", "run", "start"]
+EXPOSE 3000
+
+# Start Nginx and run it in the foreground
+CMD ["nginx", "-g", "daemon off;"]
