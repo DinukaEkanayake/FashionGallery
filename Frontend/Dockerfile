@@ -8,7 +8,7 @@ COPY Frontend/package*.json .
 
 RUN npm install
 
-COPY Frontend/src .
+COPY Frontend/* .
 
 RUN npm run build
 
