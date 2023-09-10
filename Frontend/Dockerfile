@@ -1,15 +1,14 @@
 #stage 1 - build stage
 FROM node:19.9.0-alpine as stage1
 
-WORKDIR /app
+WORKDIR Frontend/app
 
 #from local to container
 COPY Frontend/package*.json .
 
 RUN npm install
 
-COPY Frontend/public .
-COPY Frontend/src .
+COPY . .
 
 RUN npm run build
 
