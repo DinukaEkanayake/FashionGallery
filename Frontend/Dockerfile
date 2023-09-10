@@ -1,14 +1,15 @@
 #stage 1 - build stage
 FROM node:19.9.0-alpine as stage1
 
-WORKDIR Frontend/app
+# Set the working directory to the root of your project
+WORKDIR /app
 
 #from local to container
 COPY Frontend/package*.json .
 
 RUN npm install
 
-COPY . .
+COPY Frontend/ ./
 
 RUN npm run build
 
