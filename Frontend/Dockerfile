@@ -8,7 +8,7 @@ COPY Frontend/package*.json .
 
 RUN npm install
 
-COPY Frontend/* .
+COPY Frontend/src .
 
 RUN npm run build
 
@@ -18,7 +18,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the built static files from the previous stage
-COPY --from=stage1 Frontend/app/build .
+COPY --from=stage1 Frontend/build .
 
 EXPOSE 3000
 
