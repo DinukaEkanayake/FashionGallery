@@ -3,7 +3,7 @@ FROM node:19.9.0-alpine as stage1
 
 WORKDIR /app
 
-#from local to container work container
+#from local to container
 COPY package*.json .
 
 RUN npm install

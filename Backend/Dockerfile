@@ -8,7 +8,8 @@ COPY pom.xml .
 COPY . .
 
 RUN mvn clean install
-#no java 17 runtime
+
+#stage 2 - running stage
 FROM openjdk
 
 WORKDIR /app
