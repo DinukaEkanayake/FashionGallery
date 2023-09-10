@@ -19,7 +19,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the built static files from the previous stage
-COPY --from=stage1 Frontend/build .
+COPY --from=stage1 /app/build .
 
 EXPOSE 3000
 
