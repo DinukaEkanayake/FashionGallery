@@ -1,9 +1,9 @@
 #stage 1 - build stage
 FROM maven as stage1
 
-WORKDIR /app
+WORKDIR Backend/app
 
-COPY pom.xml .
+COPY Backend/pom.xml .
 
 COPY . .
 
@@ -12,11 +12,11 @@ RUN mvn clean install
 #stage 2 - running stage
 FROM openjdk
 
-WORKDIR /app
+WORKDIR Backend/app
 
 EXPOSE 8080
 
-COPY --from=stage1 /app/target/*.jar app.jar
+COPY --from=stage1 Backend/app/target/*.jar app.jar
 
 ENTRYPOINT ["java","-jar","app.jar"]
 
