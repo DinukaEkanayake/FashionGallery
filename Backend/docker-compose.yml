@@ -26,13 +26,6 @@ services:
         MYSQL_PASSWORD: admin
     volumes:
       - fashiondb:/var/lib/mysql
-
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "fashiondb" ]
-      start_period: 60s
-      interval: 10s
-      timeout: 10s
-      retries: 10
     networks:
       - fashiongallery-network
 
