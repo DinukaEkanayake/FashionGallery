@@ -5,7 +5,7 @@ WORKDIR Backend/app
 
 COPY Backend/pom.xml .
 
-COPY Backend/* .
+COPY Backend/src .
 
 RUN mvn clean install
 
@@ -16,7 +16,7 @@ WORKDIR Backend/app
 
 EXPOSE 8080
 
-COPY --from=stage1 Backend/app/target/*.jar app.jar
+COPY --from=stage1 Backend/target/*.jar app.jar
 
 ENTRYPOINT ["java","-jar","app.jar"]
 
