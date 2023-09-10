@@ -16,8 +16,8 @@ WORKDIR Backend/app
 
 EXPOSE 8080
 
-COPY --from=stage1 target/*.jar app.jar
+COPY --from=stage1 target/*.jar /app/app.jar
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
 
 
