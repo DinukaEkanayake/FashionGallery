@@ -5,7 +5,7 @@ WORKDIR Backend/app
 
 COPY Backend/pom.xml .
 
-COPY . .
+COPY Backend/* .
 
 RUN mvn clean install
 
