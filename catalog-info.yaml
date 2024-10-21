@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: DinukaEkanayake/FashionGallery
 spec:
-  type: other
-  lifecycle: unknown
-  owner: uok
+  type: service
+  owner: user:DinukaEkanayake
+  lifecycle: experimental
