@@ -4,6 +4,8 @@ metadata:
   name: FashionGallery
   annotations:
     github.com/project-slug: DinukaEkanayake/FashionGallery
+    jenkins.io/job-full-name: DinukaEkanayake/FashionGallery
+    terraform/workspaces: workspaceName1,workspaceName2
 spec:
   type: service
   owner: user:DinukaEkanayake
